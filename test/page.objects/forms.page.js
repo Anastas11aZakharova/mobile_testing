@@ -7,16 +7,36 @@ class FormsPage {
   get switch() {
     return $('//android.widget.Switch[@content-desc="switch"]');
   }
-  
-  async tapOnSwitch() {
-    await this.switch.touchAction([{
-      action: 'tap'
-  }, {
-      action: 'wait',
-      ms: 1000 ,
+  get inputField() {
+    return $('//android.widget.EditText[@content-desc="text-input"]');
   }
-  ]);
-  driver.pause(1000);
+  get youHaveTypedField() {
+    return $('//android.widget.TextView[@content-desc="input-text-result"]');
+  }
+  get activeBtn() {
+    return $('//android.view.ViewGroup[@content-desc="button-Active"]');
+  }
+  get popUpMessage() {
+    return $('//android.widget.TextView[@resource-id="android:id/message"]');
+  }
+
+  async tapOnSwitch() {
+    await this.switch.touchAction([
+      {
+        action: "tap",
+      },
+      {
+        action: "wait",
+        ms: 1000,
+      },
+    ]);
+    driver.pause(1000);
+  }
+  async enterTextInInputField(text) {
+    await this.inputField.setValue(text);
+  }
+  async clickOnActiveBtn() {
+    await this.activeBtn.click();
   }
 }
 

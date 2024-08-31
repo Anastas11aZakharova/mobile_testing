@@ -8,14 +8,16 @@ class LoginPage {
     return $('//android.widget.EditText[@content-desc="input-password"]');
   }
   get errorMessage() {
-    return $('//android.widget.TextView[@text="Please enter a valid email address"]');
+    return $(
+      '//android.widget.TextView[@text="Please enter a valid email address"]'
+    );
   }
-  
+
   async clickOnLoginBtn() {
     await this.loginBtn.click();
   }
   async enterPassword(password) {
-   await this.inputPassword.setValue(password)
+    await this.inputPassword.setValue(password);
   }
 }
 

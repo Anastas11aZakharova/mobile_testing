@@ -12,19 +12,27 @@ class SwipePage {
   }
 
   async swipeLeftFullyOpenSourceCard() {
-    await this.fullyOpenSourceCard.touchAction([{
-        action: 'press', x: 95, y: 50
-    }, {
-        action: 'wait',
-        ms: 1000 ,
-    }, {
-        action: 'moveTo', x: 5, y: 50
-    }, {
-        action: 'release',
-    }]);
+    await this.fullyOpenSourceCard.touchAction([
+      {
+        action: "press",
+        x: 95,
+        y: 50,
+      },
+      {
+        action: "wait",
+        ms: 1000,
+      },
+      {
+        action: "moveTo",
+        x: 5,
+        y: 50,
+      },
+      {
+        action: "release",
+      },
+    ]);
     driver.pause(1000);
   }
-  
 }
 
 export default new SwipePage();

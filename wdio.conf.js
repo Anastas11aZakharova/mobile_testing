@@ -1,6 +1,6 @@
 export const config = {
-    user: process.env.BROWSERSTACK_USERNAME || 'anastasiiazakhar_V62inG',
-    key: process.env.BROWSERSTACK_ACCESS_KEY || 'bSYsYU7Ry4GRb9BJB78u',
+    user: process.env.BROWSERSTACK_USERNAME || 'anastasiia_LIjnP1',
+    key: process.env.BROWSERSTACK_ACCESS_KEY || 'Q78r7w8n1SRTfiqxnUT4',
   
     updateJob: false,
     specs: [
@@ -14,7 +14,7 @@ export const config = {
       name: 'first_test',
       device: 'Google Pixel 3',
       os_version: "9.0",
-      app: process.env.BROWSERSTACK_APP_ID || 'bs://9ac9cf71101a7f0efa8ffd9186c3a6a42a3be13e',
+      app: process.env.BROWSERSTACK_APP_ID || 'bs://735756bad68ce38176105b7da1f2959ad2b94620',
       'browserstack.debug': true
     }],
   

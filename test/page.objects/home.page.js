@@ -10,7 +10,7 @@ class HomePage {
   get formsBtn() {
     return $(`~Forms`);
   }
-  
+
   async clickOnLoginBtn() {
     await this.loginBtn.click();
   }
