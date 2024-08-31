@@ -20,8 +20,7 @@ jobs:
     - name: Run Webdriver tests on Pixel
       env: 
         BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-      run: | 
-        "$BROWSERSTACK_USERNAME" npm run wdio
+      run: 'BROWSERSTACK_USERNAME="$BROWSERSTACK_USERNAME" npm run wdio'
       continue-on-error: true
 
     - name: Generate Allure Report
