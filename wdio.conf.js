@@ -1,6 +1,6 @@
 export const config = {
     user: process.env.BROWSERSTACK_USERNAME,
-    key: process.env.BROWSERSTACK_ACCESS_KEY || 'Q78r7w8n1SRTfiqxnUT4',
+    key: process.env.BROWSERSTACK_ACCESS_KEY,
   
     updateJob: false,
     specs: [
@@ -14,7 +14,7 @@ export const config = {
       name: 'first_test',
       device: 'Google Pixel 3',
       os_version: "9.0",
-      app: process.env.BROWSERSTACK_APP_ID || 'bs://735756bad68ce38176105b7da1f2959ad2b94620',
+      app: process.env.BROWSERSTACK_APP_ID,
       'browserstack.debug': true
     }],
     reporters: [['allure', {
