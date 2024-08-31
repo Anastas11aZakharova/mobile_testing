@@ -19,8 +19,8 @@ export const config = {
     }],
     reporters: [['allure', {
       outputDir: 'allure-results',
-      disableWebdriverStepsReporting: false,
-      disableWebdriverScreenshotsReporting: false,
+      disableWebdriverStepsReporting: true,
+      disableWebdriverScreenshotsReporting: true,
     }]],
     logLevel: 'info',
     coloredLogs: true,
