@@ -1,27 +1,32 @@
-# Repo with test task for browserstack
+# WebdriverIO for mobile testing
 
-## Task
-1.  Clone repo and install all dependencies.
-2.  Upload app Android-NativeDemoApp to browserstack using API ([Link](https://www.browserstack.com/docs/app-automate/api-reference/appium/apps#upload-an-app)) and add unique ID to the ```wdio.conf.js```.
-3.  Create test 5 test cases (locators can be found using [Appium Inspector](https://github.com/appium/appium-inspector/releases) that conected to the Browserstack account).
-4.  Create workflow with using secrets (for user and key in capabilities)([description of secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)).
-5.  Create 2 config files (with different devices)
+## Latest test results
+Available at https://anastas11azakharova.github.io/mobile_testing/ 
 
-## Tips
-1.  You can create multiple accounts in browserstack (demo trial - 100 minutes).
-2.  First of all find all necessary locators.
-3.  In the Appium Inspector at the header choose ```Select Cloud Providers -> Browserstack``` and into ```JSON Representation``` insert the next:
+## summary
+5 test cases for a sample andriod app (Android-NativeDemoApp-0.4.0) website using WebDriverIO framework and PageObjectModel pattern
+Covered Click, Swipe and Tap scenarios
+
+GitHub actions configured to use secrets for credentials and to run tests on 2 devices jobs in parallel:
+1. Google Pixel 3
+2. Samsung Galaxy S23 Ultra
+
+## requirements:
+- npm
+
+## steps to install:
+1. Clone repository
+2. ``` npm install ```
+3. Upload app Android-NativeDemoApp to browserstack using API ([Link](https://www.browserstack.com/docs/app-automate/api-reference/appium/apps#upload-an-app)) and add unique ID to the wdio.conf.js as well as credentials for browserstack
+
+## steps to launch:
 ```
-{
-  "appium:protocol": "https",
-  "appium:hostname": "hub.browserstack.com",
-  "appium:path": "/wd/hub",
-  "appium:maxInstances": 1,
-  "appium:app": "Your App ID is here",
-  "appium:os_version": "9.0",
-  "appium:deviceName": "Google Pixel 3",
-  "platformName": "Android",
-  "appium:autoAcceptAlerts": "true",
-  "appium:browserstack.appium_version": "1.22.0"
-}
+npm run wdio
+npm run wdio-samsung
+```
+
+## steps to generate report
+```
+npm run generate-report
+npm run open-report
 ```
