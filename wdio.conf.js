@@ -1,10 +1,10 @@
-exports.config = {
-    user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
-    key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
+export const config = {
+    user: process.env.BROWSERSTACK_USERNAME || 'anastasiiazakhar_V62inG',
+    key: process.env.BROWSERSTACK_ACCESS_KEY || 'bSYsYU7Ry4GRb9BJB78u',
   
     updateJob: false,
     specs: [
-      './e2e/specs/**.specs.js'
+      './test/specs/**.js'
     ],
     exclude: [],
   
@@ -14,7 +14,7 @@ exports.config = {
       name: 'first_test',
       device: 'Google Pixel 3',
       os_version: "9.0",
-      app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
+      app: process.env.BROWSERSTACK_APP_ID || 'bs://9ac9cf71101a7f0efa8ffd9186c3a6a42a3be13e',
       'browserstack.debug': true
     }],
   
