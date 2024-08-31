@@ -17,7 +17,11 @@ export const config = {
       app: process.env.BROWSERSTACK_APP_ID || 'bs://735756bad68ce38176105b7da1f2959ad2b94620',
       'browserstack.debug': true
     }],
-  
+    reporters: [['allure', {
+      outputDir: 'allure-results',
+      disableWebdriverStepsReporting: false,
+      disableWebdriverScreenshotsReporting: false,
+    }]],
     logLevel: 'info',
     coloredLogs: true,
     screenshotPath: './errorShots/',
