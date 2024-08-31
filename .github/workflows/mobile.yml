@@ -18,6 +18,8 @@ jobs:
       run: npm ci
 
     - name: Run Webdriver tests on Pixel
+      env: 
+        user: ${{ secrets.BROWSERSTACK_USERNAME }}
       run: npm run wdio
       continue-on-error: true
 

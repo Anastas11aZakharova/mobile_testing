@@ -1,5 +1,5 @@
 export const config = {
-    user: process.env.BROWSERSTACK_USERNAME || 'anastasiia_LIjnP1',
+    user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY || 'Q78r7w8n1SRTfiqxnUT4',
   
     updateJob: false,
