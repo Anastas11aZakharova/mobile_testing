@@ -5,6 +5,7 @@ Available at https://anastas11azakharova.github.io/mobile_testing/
 
 ## summary
 5 test cases for a sample andriod app (Android-NativeDemoApp-0.4.0) using WebDriverIO framework and PageObjectModel pattern
+
 Covered Click, Swipe and Tap scenarios
 
 GitHub actions configured to use secrets for credentials and to run tests on 2 devices jobs in parallel:
